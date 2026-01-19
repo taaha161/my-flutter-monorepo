@@ -1,0 +1,29 @@
+name: demo_app
+description: A demo app showcasing all packages in the monorepo
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  state_management:
+    path: ../../packages/state_management
+  widgets:
+    path: ../../packages/widgets
+  network:
+    path: ../../packages/network
+  shared:
+    path: ../../packages/shared
+  utils:
+    path: ../../packages/utils
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

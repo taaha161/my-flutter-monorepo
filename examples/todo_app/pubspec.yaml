@@ -1,0 +1,25 @@
+name: todo_app
+description: A todo app demonstrating widgets, state management, and utils packages
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  state_management:
+    path: ../../packages/state_management
+  widgets:
+    path: ../../packages/widgets
+  utils:
+    path: ../../packages/utils
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true

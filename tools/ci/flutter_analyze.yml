@@ -1,0 +1,30 @@
+name: Flutter Analyze
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.10.0'
+    
+    - name: Install dependencies
+      run: |
+        cd packages/widgets && flutter pub get && cd ../..
+        cd packages/state_management && flutter pub get && cd ../..
+        cd packages/network && flutter pub get && cd ../..
+        cd packages/shared && flutter pub get && cd ../..
+        cd packages/utils && flutter pub get && cd ../..
+    
+    - name: Run Flutter analyze
+      run: flutter analyze
