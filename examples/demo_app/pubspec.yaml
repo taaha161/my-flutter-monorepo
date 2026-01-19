@@ -17,8 +17,6 @@ dependencies:
     path: ../../packages/network
   shared:
     path: ../../packages/shared
-  utils:
-    path: ../../packages/utils
 
 dev_dependencies:
   flutter_test:
